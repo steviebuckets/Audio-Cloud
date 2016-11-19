@@ -1,7 +1,14 @@
+@import 'normalize.css';
+
 #background {
 	background-image: url(images/overcast.jpg);
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
 	text-align: center;
+	margin-top: -20px;
+}
+
+h1, h2 {
+	color: white;
 }
