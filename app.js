@@ -51,8 +51,8 @@ $("#user-search").keydown(function(event) {
             //console.log(username);
 
             var data = []
-            for(i=0; i <response.data.length; i++) {
-            	data.push({name: response.data[].username, icon: response.data[].pictures.small});
+            for(var i=0; i <response.data.length; i++) {
+            	data.push({name: response.data[i].username, icon: response.data[i].pictures.small});
             }
            
             var options = {
@@ -67,7 +67,7 @@ $("#user-search").keydown(function(event) {
                 template: {
                     type: "custom",
                     method: function(value, item) {
-                        return "<img src='" + item.icon + "' /> | " + item.type + " | " + value;
+                        return "<img src='" + item.icon + "' /> | " + value;
                     }
                 }
             };
