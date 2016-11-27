@@ -1,14 +1,135 @@
 @import 'normalize.css';
-
 #background {
-	background-image: url(images/overcast.jpg);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	margin-top: -20px;
+    background-color: #34495e;
+    height: 100vh;
+    text-align: center;
+    padding: 4rem 0;
 }
 
-h1, h2 {
-	color: white;
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.fa:hover {
+    color: #34495e;
+}
+
+.fa {
+    color: white;
+}
+
+#section4 .fa {
+    color: black;
+}
+
+#section4 {
+    height: 20vh;
+    padding-top: 5rem;
+}
+
+#section, .row {
+	padding-top: 8rem;
+}
+
+.navbar .input-group .form-group {
+    opacity: .7;
+    margin-top: 12px;
+    border-style: transparent;
+    color: white;
+    font-size: 24px;
+}
+
+.input-group .btn {
+    margin-top: 12px;
+    border-style: none;
+    font-size: 16px;
+}
+
+.navbar .btn {
+    width: 8rem;
+    opacity: .7;
+    background: #121a21;
+    color: white;
+}
+
+.form-group .form-control {
+    opacity: .9;
+    background: #121a21;
+    border-style: none;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#section1 h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16rem;
+}
+
+.fa-mixcloud {
+    color: white;
+    float: right;
+    padding-right: .9rem;
+}
+
+li {
+    list-style: none;
+}
+
+.container-results {
+    display: none;
+    padding: 50px 50px;
+}
+
+#section1 {
+    background-color: #d2674e;
+    color: white;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 15%;
+}
+
+#section2 {
+    /*background-image: url(images/records.jpg);*/
+    height: 70vh;
+    padding-bottom: 67rem;
+}
+
+#section3 {
+    background-image: url(images/console.jpg);
+    color: white;
+    height: 60vh;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+}
+
+@media(max-width: 767px) {
+    #background h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 4rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding-top: 22rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        color: white;
+    }
+    #logo {
+        font-size: 1.5rem;
+        float: right;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        padding: .9rem 3rem 0rem 0rem;
+    }
+    #background .fa-mixcloud {
+        font-size: 3.5rem;
+    }
 }
