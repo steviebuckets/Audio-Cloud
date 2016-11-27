@@ -51,6 +51,9 @@ $("#user-search").keydown(function(event) {
             //console.log(username);
 
             var data = []
+            for(i=0; i <response.data.length; i++) {
+            	data.push({name: response.data[].username, icon: response.data[].pictures.small});
+            }
            
             var options = {
                 data: data,
