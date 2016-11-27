@@ -31,16 +31,17 @@ $("#user-search").keydown(function(event) {
     if (event.which == 8) {
         musicSearch = $('#user-search').val();
     }
+    userMixcloudSearch();
     // console.log(musicSearch, 'up');
     // async, wait, or setTimeout
     // setTimeout(function() {
     // musicSearch = $('#user-search').val();
-    
-   // }, 3000);
+
+    // }, 3000);
 });
 
 function userMixcloudSearch() {
-	var options = {
+    var options = {
         data: []
     }
     $.getJSON("https://api.mixcloud.com/search/", { //old api "https://api.mixcloud.com/search?callback=?", {
@@ -49,17 +50,17 @@ function userMixcloudSearch() {
             q: musicSearch
         })
         .done(function(response) {
-           
-                //var username = response.data[0].username;
-                //var thumb = response.data[0].pictures.small;
-                //var kind = response.data[0].name;      
+
+            //var username = response.data[0].username;
+            //var thumb = response.data[0].pictures.small;
+            //var kind = response.data[0].name;      
             //console.log(username);
 
             var data = []
-            for(var i=0; i <response.data.length; i++) {
-            	data.push({name: response.data[i].username, icon: response.data[i].pictures.small});
+            for (var i = 0; i < response.data.length; i++) {
+                data.push({ name: response.data[i].username, icon: response.data[i].pictures.small });
             }
-           
+
             var options = {
                 data: data,
                 getValue: "name",
