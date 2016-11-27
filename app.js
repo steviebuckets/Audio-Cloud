@@ -53,7 +53,11 @@ $("#user-search").keydown(function(event) {
             //console.log(username);
 
             var options = {
-                data: [{ name: (username), type: (name), icon: (thumb) }],
+                data: data,
+                getValue: "name",
+
+               
+                //[{ name: (username), type: (name), icon: (thumb) }],
                 getValue: "name",
 
 
