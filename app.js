@@ -38,7 +38,7 @@ $("#user-search").keydown(function(event) {
     var options = {
         data: []
     }
-    $.getJSON("https://api.mixcloud.com/search/?q=&type=cloudcast", { //old api "https://api.mixcloud.com/search?callback=?", {
+    $.getJSON("https://api.mixcloud.com/search/", { //old api "https://api.mixcloud.com/search?callback=?", {
             //are these the right parameters for the object?
             type: 'user',
             q: musicSearch
@@ -55,7 +55,7 @@ $("#user-search").keydown(function(event) {
             var options = {
                 data: [{ name: (username), type: (name), icon: (thumb) }],
                 getValue: "name",
-                
+
 
                 template: {
                     type: "custom",
