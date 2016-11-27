@@ -45,13 +45,13 @@ $("#user-search").keydown(function(event) {
         })
         .done(function(response) {
            
-                var username = response.data[0].username;
-                var thumb = response.data[0].pictures.small;
-                var kind = response.data[0].name;
-         
-
+                //var username = response.data[0].username;
+                //var thumb = response.data[0].pictures.small;
+                //var kind = response.data[0].name;      
             //console.log(username);
-            var data []
+
+            var data = []
+           
             var options = {
                 data: data,
                 getValue: "name",
