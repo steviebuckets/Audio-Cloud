@@ -35,7 +35,12 @@ $("#user-search").keydown(function(event) {
     // async, wait, or setTimeout
     // setTimeout(function() {
     // musicSearch = $('#user-search').val();
-    var options = {
+    
+   // }, 3000);
+});
+
+function userMixcloudSearch() {
+	var options = {
         data: []
     }
     $.getJSON("https://api.mixcloud.com/search/", { //old api "https://api.mixcloud.com/search?callback=?", {
@@ -79,9 +84,8 @@ $("#user-search").keydown(function(event) {
 
 
         });
-    // }, 3000);
-});
 
+}
 
 
 function getDataFromApi(query) {
