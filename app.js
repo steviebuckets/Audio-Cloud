@@ -15,27 +15,10 @@ $("#user-search").keydown(function(event) {
 
     if (musicSearch.length > 3) {
         userMixcloudSearch();
-	} 
+    }
     musicSearch += String.fromCharCode(event.which);
 
 
-
-    // deletion!!!
-    // what is the delete key?
-    // if (event.which == 8){
-    // 	console.log('deleted');
-    // 	musicSearch = $('#user-search').val();
-    // 	console.log('after delete', musicSearch);
-    // } else {
-
-    //musicSearch();
-
-
-    //console.log(musicSearch, 'down');
-
-    // }
-    // 
-    // console.log(musicSearch) // event.keyCode, etc... "letters"
 
 }).keyup(function(event) {
     if (event.which == 8) {
