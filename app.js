@@ -9,11 +9,17 @@ $(document).ready(function() {
     });
 });
 
-//throttle  - 2 to 5s
-//  keylisteners
-/// "getting musicSearch in"
+
 var musicSearch = "";
 $("#user-search").keydown(function(event) {
+
+    if (musicSearch.length > 3) {
+        userMixcloudSearch();
+	} 
+    musicSearch += String.fromCharCode(event.which);
+
+
+
     // deletion!!!
     // what is the delete key?
     // if (event.which == 8){
@@ -21,8 +27,12 @@ $("#user-search").keydown(function(event) {
     // 	musicSearch = $('#user-search').val();
     // 	console.log('after delete', musicSearch);
     // } else {
-    musicSearch += String.fromCharCode(event.which);
-    console.log(musicSearch, 'down');
+
+    //musicSearch();
+
+
+    //console.log(musicSearch, 'down');
+
     // }
     // 
     // console.log(musicSearch) // event.keyCode, etc... "letters"
@@ -30,15 +40,16 @@ $("#user-search").keydown(function(event) {
 }).keyup(function(event) {
     if (event.which == 8) {
         musicSearch = $('#user-search').val();
-    }
-    userMixcloudSearch();
-    // console.log(musicSearch, 'up');
-    // async, wait, or setTimeout
-    // setTimeout(function() {
-    // musicSearch = $('#user-search').val();
 
-    // }, 3000);
+    }
+
+    userMixcloudSearch();
+
+
+
 });
+
+
 
 function userMixcloudSearch() {
     var options = {
@@ -63,7 +74,10 @@ function userMixcloudSearch() {
 
             var options = {
                 data: data,
+                requestDelay: 300,
                 getValue: "name",
+
+
 
 
                 //[{ name: (username), type: (name), icon: (thumb) }],
@@ -89,11 +103,11 @@ function userMixcloudSearch() {
 }
 
 
-function getDataFromApi(query) {
-    //is this the right callback function?
+//function getDataFromApi(query) {
+//is this the right callback function?
 
-    // step 1: get the user
-    $.getJSON("https://api.mixcloud.com/search?callback=?", {
+// step 1: get the user
+/* $.getJSON("https://api.mixcloud.com/search?callback=?", {
             //are these the right parameters for the object?
             type: 'user',
             q: query
@@ -122,7 +136,7 @@ function getDataFromApi(query) {
 
             });
 
-}
+//}
 
 /*var options = {
 	data: [ {name: "username, type: "air", icon: "http://l},
