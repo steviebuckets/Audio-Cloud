@@ -8,7 +8,7 @@
 
 .cf:before,
 .cf:after {
-    content: " ";
+    content: "";
     display: table;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .fa {
-    color: white;
+    color: rgb(58, 58, 61);
 }
 
 #section4 .fa {
@@ -33,12 +33,13 @@
     padding-top: 5rem;
 }
 
-#section, .row {
-	padding-top: 8rem;
+#section,
+.row {
+    padding-top: 8rem;
 }
 
 .navbar .input-group .form-group {
-    opacity: .7;
+    opacity: .9;
     margin-top: 12px;
     border-style: transparent;
     color: white;
@@ -46,9 +47,12 @@
 }
 
 .input-group .btn {
-    margin-top: 12px;
+    margin-top: 27px;
     border-style: none;
     font-size: 16px;
+    background-color: rgb(58, 58, 61);
+    height: 3.05em;
+    color: white;
 }
 
 .navbar .btn {
@@ -59,12 +63,13 @@
 }
 
 .form-group .form-control {
-    opacity: .9;
-    background: #121a21;
+    background-color: rgb(58, 58, 61);
     border-style: none;
     color: white;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 27px;
+    height: 3.5em;
 }
 
 #section1 h1 {
@@ -72,33 +77,31 @@
     font-size: 16rem;
 }
 
-.fa-mixcloud {
+#section2 h1,
+p {
     color: white;
-    float: right;
-    padding-right: .9rem;
 }
 
 li {
     list-style: none;
 }
 
-.container-results {
-    display: none;
-    padding: 50px 50px;
-}
-
 #section1 {
-    background-color: #d2674e;
-    color: white;
+    background-color: white;
+    color: rgb(58, 58, 61);
     background-size: cover;
     height: 100vh;
     padding-top: 15%;
 }
 
+
+/*Media Queries*/
+
 #section2 {
     /*background-image: url(images/records.jpg);*/
     height: 70vh;
     padding-bottom: 67rem;
+    background-color: #FF5722;
 }
 
 #section3 {
@@ -107,6 +110,10 @@ li {
     height: 60vh;
     background-repeat: no-repeat;
     padding-top: 5rem;
+}
+
+#section4 p {
+    color: orange;
 }
 
 @media(max-width: 767px) {
@@ -120,16 +127,18 @@ li {
         padding-right: 2rem;
         color: white;
     }
-    #logo {
-        font-size: 1.5rem;
-        float: right;
-        color: white;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-decoration: none;
-        padding: .9rem 3rem 0rem 0rem;
-    }
     #background .fa-mixcloud {
         font-size: 3.5rem;
+    }
+    #section1 .text-center,
+    h1 {
+        font-size: 50px;
+    }
+    #section1 .fa {
+        font-size: 4.3rem;
+    }
+    #section1 .col-sm-4 {
+        display: inline-block;
+        margin-left: 21px;
     }
 }
